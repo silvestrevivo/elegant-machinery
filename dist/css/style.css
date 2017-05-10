@@ -100,7 +100,7 @@ h6{font-size:10px}
 }
 @media screen and (min-width:1200px){h6{font-size:12px;line-height:1.1}
 }
-body{background:url(/dist/img/elegantmachinery.gif) center center no-repeat;background-size:cover}
+body{background:url(/dist/img/elegantmachinery.gif) center center no-repeat;background-size:cover;-webkit-transition:background 1s ease;transition:background 1s ease}
 .wrapper{display:table;width:100%;height:32%}
 ul{display:table-cell}
 ul li{font-size:150px;display:inline-block;font-family:Audiowide,cursive;text-align:center;color:rgba(255,255,255,.2)}
@@ -110,11 +110,13 @@ ul.machinery li{float:left;width:10.22222%;margin-right:1%;margin-bottom:0}
 ul.machinery li:nth-child(9n){margin-right:0}
 .wrapper-keys{width:80%;margin:0 auto}
 .wrapper-keys ul.keys{display:table-cell}
-.wrapper-keys ul.keys li.key{display:inline-block;text-align:center;border-radius:8px;height:40%;border:2px solid rgba(255,255,255,.5);padding:10px;-webkit-transition:all .07s ease;transition:all .07s ease;float:left;width:9.33333%;margin-right:2%;margin-bottom:2%}
+.wrapper-keys ul.keys li.key{display:inline-block;text-align:center;border-radius:8px;height:40%;border:2px solid rgba(255,255,255,.5);padding:10px;-webkit-transition:opacity 1s ease-in-out;transition:opacity 1s ease-in-out;opacity:0;visibility:visible;float:left;width:9.33333%;margin-right:2%;margin-bottom:2%}
 .wrapper-keys ul.keys li.key:nth-child(9n){margin-right:0}
+.wrapper-keys ul.keys li.key.visible{opacity:1}
 .wrapper-keys ul.keys li.key.play{border-color:#fff;-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .wrapper-keys ul.keys li.key.play kbd{background-color:#fff}
 .wrapper-keys ul.keys li.key.play span{color:#fff;font-size:12px}
 .wrapper-keys ul.keys kbd{font-size:28px;display:block;-webkit-transition:all .07s ease;transition:all .07s ease;width:50%;margin:0 auto}
 .wrapper-keys ul.keys span{color:#ff0;-webkit-transition:all .07s ease;transition:all .07s ease;font-size:15px;display:block;margin-top:20px}
-footer{color:#fff}
+footer,footer a{color:#fff}
+footer a:hover{color:grey;text-decoration:none}

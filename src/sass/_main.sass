@@ -5,6 +5,7 @@
 body
   background: url('/dist/img/elegantmachinery.gif') no-repeat center center
   background-size: cover
+  transition: background 1s ease
 
 .wrapper
   display: table
@@ -42,8 +43,13 @@ ul
       height: 40%
       border: 2px solid rgba(255, 255, 255, 0.5)
       padding: 10px
-      transition: all .07s ease
+      transition: transform .07s ease
+      transition: opacity 1s ease-in-out
+      opacity: 0
+      visibility: visible
       +grid(9, 2%)
+      &.visible
+        opacity: 1
       &.play
         border-color: white
         transform: scale(1.1)
@@ -68,7 +74,11 @@ ul
 
 footer
   color: white
-
+  a
+    color: white
+    &:hover
+      color: grey
+      text-decoration: none
 
 //small devices => 480px
 +bp-xs
